@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quer se casar com mingo?</title>
+
+    <style>
+      * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: gray;
+}
+
+main {
+    text-align: center;
+}
+
+header {
+    text-align: center;
+    
+}
+
+label {
+    padding: 1px;
+}
+
+
+
+section {
+    background: white;
+    width: 500px;
+    padding: 15px;
+    border-radius: 50px;
+    margin: auto;
+    box-shadow: 5px 10px rgba(0, 0, 0, 0.575);
+}
+
+div.text {
+    text-align: center;
+}
+
+div#res {
+    text-align: center;
+}
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <img id='imagem' src="imagecat.png" alt=""cat>
+    </main>
+    <header>
+      <h1>Quer casar com mingo?</h1>
+    </header>
+    <section>
+      <div class="text">
+        <p>
+          <h2>Vose casaria com eu?</h2>
+        </p>
+      </div>
+      <div class="escolhas">
+        <p>
+          <br />
+          <input type="radio" name="escolha" id="a" />
+          <label for="a"><strong>a)</strong></label> Sim</label>
+          <br />
+          <input type="radio" name="escolha" id="b" />
+          <label for="b"><strong>b)</strong> a</label>
+          <br />
+          <input type="radio" name="escolha" id="c" />
+          <label for="c"><strong>c)</strong> b</label>
+          <br>
+          <input type="radio" name="escolha" id="d" />
+          <label for="c"><strong>d)</strong> Não</label>
+        </p>
+        <p class="result">
+          <input type="button" value="Resultado" onclick="resultado()" />
+        </p>
+      </div>
+      <div id="res">
+        <p><h4>Aperte no botão acima para saber</p></h4>
+      </div>
+    </section>
+    
+  </body>
+  <script>
+  function resultado() {
+    var a = "Sim"
+    var b = a
+    var c = b
+    var d = "Não"
+    var res = document.getElementById('res')
+    var img = document.getElementById('imagem')
+
+
+    var options = document.getElementsByName('escolha')
+    var escolha = ''
+    if (options[0].checked) {
+        escolha = a
+        img.src = 'happy-cat.gif'
+        window.document.body.style.background = '#D20062'
+        res.innerHTML = "🥳🥳🥳🥳🥳🥳🥳🥳" 
+    } else if (options[1].checked) {
+        escolha = b
+        img.src = 'happy-cat.gif'
+        window.document.body.style.background = '#D20062'
+        res.innerHTML = "🥳🥳🥳🥳🥳🥳🥳🥳"
+    } else if (options[2].checked){
+        escolha = c
+        img.src = 'happy-cat.gif'
+        window.document.body.style.background = '#D20062'
+        res.innerHTML = "🥳🥳🥳🥳🥳🥳🥳🥳"
+    } else {
+        escolha = d
+        img.src = 'gato-banana.gif'
+        window.document.body.style.background = "#232D3F"
+        res.innerHTML = '😪'
+    }
+}</script>
+</html>
+
